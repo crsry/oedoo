@@ -16,7 +16,7 @@ jobs:
     env:
       ENABLE_BACKUP: false
       ENABLE_CREDENTIALS: false
-      ENABLE_MFE: false
+      ENABLE_MFE: true
       ENABLE_LICENSE_MANAGER: true
 
       SUBDOMAIN: ed
