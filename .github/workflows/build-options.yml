@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ENABLE_BACKUP: true
-      ENABLE_CREDENTIALS: false
+      ENABLE_CREDENTIALS: true
       ENABLE_MFE: true
-      ENABLE_LICENSE_MANAGER: false
+      ENABLE_LICENSE_MANAGER: true
 
       SUBDOMAIN: ed
       DOMAIN_NAME: coursery.co
@@ -58,4 +58,4 @@ jobs:
 
       - name: Build License Manager
         if: ${{ env.ENABLE_LICENSE_MANAGER == 'true' }}
-        uses: openedx-actions/tutor-plugin-build-license-manager@v0.0.2
+        uses: minischoolx/tutor-plugin-build-license-manager@main
