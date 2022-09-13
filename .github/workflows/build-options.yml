@@ -14,16 +14,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      ENABLE_BACKUP: false
-      ENABLE_CREDENTIALS: false
-      ENABLE_MFE: false
-      ENABLE_LICENSE_MANAGER: true
+      ENABLE_BACKUP: true
+      ENABLE_CREDENTIALS: true
+      ENABLE_MFE: true
+      ENABLE_LICENSE_MANAGER: false
 
       SUBDOMAIN: ed
       DOMAIN_NAME: coursery.co
       SITE_NAME: coursery
       AWS_REGION: ap-south-1
-      LMS_HOST: ed.coursery.co
 
     steps:
       - uses: actions/checkout@v3.0.2
@@ -60,5 +59,3 @@ jobs:
       - name: Build License Manager
         if: ${{ env.ENABLE_LICENSE_MANAGER == 'true' }}
         uses: crsry/tutor-plugin-build-license-manager@main
-        with:
-          mfe-host: ${MFE_HOST}
