@@ -29,8 +29,8 @@ jobs:
       # feature flags for optional tutor modules
       # --------------------------------------------
       ENABLE_S3: true
-      ENABLE_BACKUP: false
-      ENABLE_CREDENTIALS: false
+      ENABLE_BACKUP: true
+      ENABLE_CREDENTIALS: true
       
       ENABLE_DISCOVERY: true
       
@@ -40,7 +40,7 @@ jobs:
       ENABLE_MFE: true
       ENABLE_NOTES: true
       ENABLE_XQUEUE: true
-      ENABLE_LICENSE_MANAGER: true
+      ENABLE_LICENSE_MANAGER: false
       
 
     # deployment workflow begins here
