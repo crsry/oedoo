@@ -14,9 +14,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      ENABLE_BACKUP: true
-      ENABLE_CREDENTIALS: true
-      ENABLE_MFE: true
+      ENABLE_BACKUP: false
+      ENABLE_CREDENTIALS: false
+      ENABLE_MFE: false
       ENABLE_LICENSE_MANAGER: true
 
       SUBDOMAIN: ed
